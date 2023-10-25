@@ -15,8 +15,7 @@ public class AppRestartTool
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #else
-        //Debug.Log(" ResartApp   MJavaObject.Call(restartApplication, 10) ");
-        MJavaObject.Call("restartApplication",0);
+        MJavaObject.Call("restartApp");
         MJavaObject.Dispose();
 #endif
 
@@ -41,7 +40,7 @@ public class AppRestartTool
 
             if (javaObject == null)
             {
-                javaObject = new AndroidJavaObject("com.example.restartlibrary.AppRestart");
+                javaObject = new AndroidJavaObject("com.example.resartapplibrary.ResartAPP");
             }
 
             return javaObject;
